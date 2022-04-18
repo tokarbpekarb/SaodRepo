@@ -11,6 +11,7 @@ namespace CountWords
         static void Main(string[] args)
         {
             Console.WriteLine("tokarbpekarb");
+            Console.WriteLine("poluyan test");
         }
     }
 }
