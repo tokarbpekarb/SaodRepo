@@ -1,0 +1,7 @@
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\bin\Debug\CountWords.exe.config
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\bin\Debug\CountWords.exe
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\bin\Debug\CountWords.pdb
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.AssemblyReference.cache
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.exe
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.pdb
