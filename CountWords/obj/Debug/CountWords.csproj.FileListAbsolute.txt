@@ -1,0 +1,2 @@
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.AssemblyReference.cache
+C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.CoreCompileInputs.cache
