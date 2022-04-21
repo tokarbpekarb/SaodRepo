@@ -13,6 +13,8 @@ namespace CountWords
             Console.WriteLine("tokarbpekarb");
             Console.WriteLine("poluyan test");
             Console.WriteLine("0rtem.k test") // я тут был кста
+
+            Console.WriteLine("Миша, чини коммит")
         }
     }
 }
