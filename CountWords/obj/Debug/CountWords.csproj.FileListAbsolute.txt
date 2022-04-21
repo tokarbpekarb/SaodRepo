@@ -5,3 +5,11 @@ C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\Cou
 C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.CoreCompileInputs.cache
 C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.exe
 C:\Users\Пользователь\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.pdb
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\bin\Debug\CountWords.exe.config
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\bin\Debug\CountWords.exe
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\bin\Debug\CountWords.pdb
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\obj\Debug\CountWords.csproj.AssemblyReference.cache
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\obj\Debug\CountWords.csproj.SuggestedBindingRedirects.cache
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\obj\Debug\CountWords.csproj.CoreCompileInputs.cache
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\obj\Debug\CountWords.exe
+D:\ДЗ\2 курс\2 семестр\САОД\git_our\CountWords\obj\Debug\CountWords.pdb
