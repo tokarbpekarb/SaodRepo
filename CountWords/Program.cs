@@ -13,7 +13,7 @@ namespace CountWords
             Console.WriteLine("tokarbpekarb");
             Console.WriteLine("poluyan test");
             Console.WriteLine("0rtem.k test"); // и тут я был
-            //fdsgsdfg Michail Iliin
+            //fdsgsdfg Michail Iliin test3
         }
     }
 }
