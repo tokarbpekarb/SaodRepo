@@ -14,7 +14,7 @@ namespace CountWords
             Console.WriteLine("poluyan test");
             Console.WriteLine("0rtem.k test"); // и тут я был
             //fdsgsdfg Michail Iliin
-            //ABoba
+            //ABoba ddd
         }
     }
 }
