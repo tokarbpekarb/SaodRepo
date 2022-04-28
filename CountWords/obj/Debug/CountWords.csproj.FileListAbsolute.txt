@@ -17,3 +17,6 @@ C:\Users\1395358\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.As
 C:\Users\1395358\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.csproj.CoreCompileInputs.cache
 C:\Users\1395358\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.exe
 C:\Users\1395358\Source\Repos\SaodRepo\CountWords\obj\Debug\CountWords.pdb
+C:\Users\1395358\source\repos\SaodRepo\CountWords\bin\Debug\CountWords.exe.config
+C:\Users\1395358\source\repos\SaodRepo\CountWords\bin\Debug\CountWords.exe
+C:\Users\1395358\source\repos\SaodRepo\CountWords\bin\Debug\CountWords.pdb
