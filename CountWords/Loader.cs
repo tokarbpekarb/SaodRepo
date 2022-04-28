@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CountWords
 {
-	public class Loader
-	{
-		public Loader()
-		{
-		}
+    class Loader
+    {
 		public List<string> Load(string filename)
 		{
 			var words = new List<string>();
