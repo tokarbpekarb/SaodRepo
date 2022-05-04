@@ -1,0 +1,16 @@
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\SAOD ListWithLambda.exe
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\SAOD ListWithLambda.deps.json
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\SAOD ListWithLambda.runtimeconfig.json
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\SAOD ListWithLambda.runtimeconfig.dev.json
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\SAOD ListWithLambda.dll
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\ref\SAOD ListWithLambda.dll
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\bin\Debug\net5.0\SAOD ListWithLambda.pdb
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.csproj.AssemblyReference.cache
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.GeneratedMSBuildEditorConfig.editorconfig
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.AssemblyInfoInputs.cache
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.AssemblyInfo.cs
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.csproj.CoreCompileInputs.cache
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.dll
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\ref\SAOD ListWithLambda.dll
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.pdb
+A:\2 КУРС\САОД\SAOD ListWithLambda\SAOD ListWithLambda\obj\Debug\net5.0\SAOD ListWithLambda.genruntimeconfig.cache

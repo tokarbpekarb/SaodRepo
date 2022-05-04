@@ -1,0 +1,32 @@
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.exe
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.deps.json
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.runtimeconfig.json
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.runtimeconfig.dev.json
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.dll
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\ref\DoubleLinkList.dll
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.pdb
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.csproj.AssemblyReference.cache
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.AssemblyInfoInputs.cache
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.AssemblyInfo.cs
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.csproj.CoreCompileInputs.cache
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.dll
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\ref\DoubleLinkList.dll
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.pdb
+C:\Users\Пользователь\OneDrive\Desktop\DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.genruntimeconfig.cache
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.exe
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.deps.json
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.runtimeconfig.json
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.runtimeconfig.dev.json
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.dll
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\ref\DoubleLinkList.dll
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\bin\Debug\net5.0\DoubleLinkList.pdb
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.csproj.AssemblyReference.cache
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.GeneratedMSBuildEditorConfig.editorconfig
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.AssemblyInfoInputs.cache
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.AssemblyInfo.cs
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.csproj.CoreCompileInputs.cache
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.dll
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\ref\DoubleLinkList.dll
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.pdb
+A:\2 КУРС\САОД\SAOD DoubleLinkList\DoubleLinkList\obj\Debug\net5.0\DoubleLinkList.genruntimeconfig.cache
