@@ -46,6 +46,7 @@
     <Compile Include="AVL_Tree.cs" />
     <Compile Include="ICountWords.cs" />
     <Compile Include="Loader.cs" />
+    <Compile Include="mediana.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
