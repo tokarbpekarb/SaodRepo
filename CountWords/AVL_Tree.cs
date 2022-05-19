@@ -151,5 +151,35 @@ namespace CountWords
             var res = ToStringHelper(root).Value;
             return res;
         }
+
+        public bool Contains(T item)
+        {
+            AVLNode<T> current = root;
+            while (current != null)
+            {
+                if (current.value.CompareTo(item) == 0)
+                    return true;
+                if (current.value.CompareTo(item) > 0)
+                    current = current.left;
+                else
+                    current = current.right;
+            }
+            return false;
+        }
+
+        public bool ContainsKey(T item)
+        {
+            AVLNode<T> current = root;
+            while (current != null)
+            {
+                if (current.value.CompareTo(item) == 0)
+                    return true;
+                if (current.value.CompareTo(item) > 0)
+                    current = current.left;
+                else
+                    current = current.right;
+            }
+            return false;
+        }
     }
 }

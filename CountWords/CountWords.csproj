@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AVL_Tree.cs" />
+    <Compile Include="BoxPlot.cs" />
     <Compile Include="ICountWords.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Program.cs" />
