@@ -6,49 +6,85 @@ using System.Threading.Tasks;
 
 namespace CountWords
 {
-    class AVLNode<T> where T:IComparable<T>
+    class TreeNodeAVL
     {
-        public T value;
+        public KeyValuePair<string, int> item;
+        public TreeNodeAVL left, right;
         public int height;
-        public AVLNode<T> left, right;
 
-        public AVLNode(T item)
+        public TreeNodeAVL(string key, int value)
         {
-            value = item;
+            item = new KeyValuePair<string, int>(key, value);
         }
     }
-    class AVL_Tree<T> where T:IComparable<T>
+    class WordsCountAVL : ICountWords
     {
-        AVLNode<T> root;
+        TreeNodeAVL root;
         int size;
-        public void Add(T item)
-        {
-            root = _Add(item, root);
 
+        public int Count
+        {
+            get =>  size;
+        }
+        
+        public TreeNodeAVL Find(string key)
+        {
+            TreeNodeAVL current = root;
+            while (current != null)
+            {
+                if (current.item.Key == key)
+                    return current;
+                if (String.Compare(key, current.item.Key) < 0)
+                    current = current.left;
+                else
+                    current = current.right;
+            }
+            throw new Exception("haha");
         }
 
-        private AVLNode<T> _Add(T item, AVLNode<T> subroot)
+        public int this[string key]
+        {
+            get
+            {
+                return Find(key).item.Value;
+            }
+            set
+            {
+                TreeNodeAVL find = Find(key);
+                //string k = find.item.Key;
+                int val = value;
+                find.item = new KeyValuePair<string, int>(key, val);
+            }
+        }
+        public void Add(string key, int value)
+        {
+            root = _Add(key,value, root);
+            size++;
+        }
+
+
+        private TreeNodeAVL _Add(string key, int value, TreeNodeAVL subroot)
         {
             if (subroot == null)
-                return new AVLNode<T>(item);
-            if (item.CompareTo(subroot.value) < 0)
-                subroot.left = _Add(item, subroot.left);
+                return new TreeNodeAVL(key,value);
+            if (String.Compare(key,subroot.item.Key) < 0)
+                subroot.left = _Add(key, value, subroot.left);
             else
-                subroot.right = _Add(item, subroot.right);
+                subroot.right = _Add(key,value, subroot.right);
             UpdateHeight(subroot);
             int b = GetBalance(subroot);
 
             // повороты
-            if (b > 1 && item.CompareTo(subroot.left.value) < 0)
-                return _RightRotate(subroot);
-            if (b < -1 && item.CompareTo(subroot.right.value) > 0)
+            if (b > 1 && String.Compare(key, subroot.left.item.Key) < 0)
+                    return _RightRotate(subroot);
+            if (b < -1 && String.Compare(key, subroot.right.item.Key) > 0)
                 return _LeftRotate(subroot);
-            if (b > 1 && item.CompareTo(subroot.left.value) > 0)
+            if (b > 1 && String.Compare(key, subroot.left.item.Key) > 0)
             {
                 subroot.left = _LeftRotate(subroot.left);
                 return _RightRotate(subroot);
             }
-            if (b < -1 && item.CompareTo(subroot.right.value) < 0)
+            if (b < -1 && String.Compare(key, subroot.right.item.Key) < 0)
             {
                 subroot.right = _RightRotate(subroot.right);
                 return _LeftRotate(subroot);
@@ -57,24 +93,24 @@ namespace CountWords
             return subroot;
         }
 
-        private int GetHeight(AVLNode<T> node)
+        private int GetHeight(TreeNodeAVL node)
         {
             return node == null ? 0 : node.height;
         }
 
-        private int GetBalance(AVLNode<T> node)
+        private int GetBalance(TreeNodeAVL node)
         {
             return node == null ? 0 : GetHeight(node.left) - GetHeight(node.right);
         }
 
-        private void UpdateHeight(AVLNode<T> node)
+        private void UpdateHeight(TreeNodeAVL node)
         {
             node.height = 1 + Math.Max(GetHeight(node.left), GetHeight(node.right));
         }
 
-        private AVLNode<T> _RightRotate(AVLNode<T> subroot)
+        private TreeNodeAVL _RightRotate(TreeNodeAVL subroot)
         {
-            AVLNode<T> b = subroot.left;
+            TreeNodeAVL b = subroot.left;
             subroot.left = b.right;
             b.right = subroot;
             UpdateHeight(subroot);
@@ -83,9 +119,9 @@ namespace CountWords
         }
 
         //малое левое вращение
-        private AVLNode<T> _LeftRotate(AVLNode<T> subroot)
+        private TreeNodeAVL _LeftRotate(TreeNodeAVL subroot)
         {
-            AVLNode<T> b = subroot.right;
+            TreeNodeAVL b = subroot.right;
             subroot.right = b.left;
             b.left = subroot;
             UpdateHeight(subroot);
@@ -93,18 +129,22 @@ namespace CountWords
             return b;
         }
 
-        public int GetDeep()
+        public bool ContainsKey(string key)
         {
-            return _GetDeep(root);
+            TreeNodeAVL current = root;
+            while(current != null)
+            {
+                if (key == current.item.Key)
+                    return true;
+                if (String.Compare(key, current.item.Key) < 0)
+                    current = current.left;
+                else
+                    current = current.right;
+            }
+            return false;
         }
 
-        private int _GetDeep(AVLNode<T> subroot)
-        {
-            if (subroot == null) return 0;
-            return 1 + Math.Max(_GetDeep(subroot.left), _GetDeep(subroot.right));
-        }
-
-        private KeyValuePair<int, string> ToStringHelper(AVLNode<T> n)
+        private KeyValuePair<int, string> ToStringHelper(TreeNodeAVL n)
         {
             if (n == null)
                 return new KeyValuePair<int, string>(1, "\n");
@@ -112,7 +152,7 @@ namespace CountWords
             var left = ToStringHelper(n.left);
             var right = ToStringHelper(n.right);
 
-            var objString = n.value.ToString();
+            var objString = n.item.ToString();
             var stringBuilder = new StringBuilder();
 
             stringBuilder.Append(' ', left.Key - 1);
@@ -150,36 +190,6 @@ namespace CountWords
         {
             var res = ToStringHelper(root).Value;
             return res;
-        }
-
-        public bool Contains(T item)
-        {
-            AVLNode<T> current = root;
-            while (current != null)
-            {
-                if (current.value.CompareTo(item) == 0)
-                    return true;
-                if (current.value.CompareTo(item) > 0)
-                    current = current.left;
-                else
-                    current = current.right;
-            }
-            return false;
-        }
-
-        public bool ContainsKey(T item)
-        {
-            AVLNode<T> current = root;
-            while (current != null)
-            {
-                if (current.value.CompareTo(item) == 0)
-                    return true;
-                if (current.value.CompareTo(item) > 0)
-                    current = current.left;
-                else
-                    current = current.right;
-            }
-            return false;
         }
     }
 }
