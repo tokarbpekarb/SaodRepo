@@ -10,14 +10,6 @@ namespace CountWords
     {
         static void Main(string[] args)
         {
-            //WordsCountAVL tree = new WordsCountAVL();
-            //tree.Add("first", 1);
-            //tree.Add("second", 1);
-            //tree.Add("third", 1);
-            //tree.Add("f", 1);
-            //tree["second"]++;
-            //Console.WriteLine(tree.Print());
-            //Console.ReadKey();
 
             var loader = new Loader();
             var words = loader.Load("../../../big.txt");
@@ -27,7 +19,25 @@ namespace CountWords
             // Уникальных: 525090
             // the 564373
 
-            //реализация через AVL дерево
+            System.Diagnostics.Stopwatch watch;
+            List<long> times = new List<long>();
+
+            long elapsedMs;
+
+            //реализация через SortedList (двоичный поиск) задание 8
+            Console.WriteLine("Реализация через SortedList");
+            SortedList<string, int> list = new SortedList<string, int>();
+            foreach(var word in words)
+            {
+                if (list.ContainsKey(word))
+                    list[word]++;
+                else
+                    list.Add(word, 1);
+            }
+            Console.WriteLine("Уникальных: " + list.Count);
+
+            //реализация через AVL дерево (задание 9)
+            Console.WriteLine("Реализация через AVL дерево");
             WordsCountAVL tree = new WordsCountAVL();
             foreach (var word in words)
             {
