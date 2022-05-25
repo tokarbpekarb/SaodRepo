@@ -44,11 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AVL_Tree.cs" />
+    <Compile Include="BoxPlot.cs" />
     <Compile Include="ICountWords.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="mediana.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordsCountAVL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

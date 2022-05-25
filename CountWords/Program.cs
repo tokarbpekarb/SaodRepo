@@ -8,9 +8,9 @@ namespace CountWords
 {
     class Program
     {
-
-        static void nataliaTest()
+        static void Main(string[] args)
         {
+
             var loader = new Loader();
             var words = loader.Load("../../../big.txt");
             Console.WriteLine("Всего слов: " + words.Count);
@@ -24,45 +24,49 @@ namespace CountWords
 
             long elapsedMs;
 
-            for (int i = 0; i < 5; i++)
+            //реализация через SortedList (двоичный поиск) задание 8
+            Console.WriteLine("Реализация через SortedList");
+            SortedList<string, int> list = new SortedList<string, int>();
+            foreach(var word in words)
             {
-                watch = System.Diagnostics.Stopwatch.StartNew();
-
-
-                var dict = new Dictionary<string, int>();
-                //var dict = new Dictionary<string, int>();
-                //var dict = new ВашКонтейнер<string, int>();
-                foreach (var word in words)
-                {
-                    if (dict.ContainsKey(word)) // log(n)
-                        ++dict[word];      // log(n)
-                    else
-                        dict.Add(word, 1);
-                }
-                Console.WriteLine("Уникальных: " + dict.Count);
-
-                watch.Stop();
-                elapsedMs = watch.ElapsedMilliseconds;
-                times.Add(elapsedMs);
-
-
+                if (list.ContainsKey(word))
+                    list[word]++;
+                else
+                    list.Add(word, 1);
             }
-            var mediana = new mediana();
+            Console.WriteLine("Уникальных: " + list.Count);
 
-            var result = mediana.calc_mean_median_stddev(times);
+            //реализация через AVL дерево (задание 9)
+            Console.WriteLine("Реализация через AVL дерево");
+            WordsCountAVL tree = new WordsCountAVL();
+            foreach (var word in words)
+            {
+                if (tree.ContainsKey(word))
+                    ++tree[word];
+                else
+                    tree.Add(word, 1);
+            }
+            Console.WriteLine("УникальныхЖ " + tree.Count);
 
-            Console.WriteLine(result);
 
+            //var dict = new SortedDictionary<string, int>();
+            //var dict = new Dictionary<string, int>();
+            //var dict = new ВашКонтейнер<string, int>();
+            //foreach (var word in words)
+            //{
+            //    if (dict.ContainsKey(word)) // log(n)
+            //        ++dict[word];      // log(n)
+            //    else
+            //        dict.Add(word, 1);
+            //}
+            //Console.WriteLine("Уникальных: " + dict.Count);
 
+            //string str = "the";
+            //if (dict.ContainsKey(str))
+            //    Console.WriteLine(str + " " + dict[str]);
+            //else
+            //    Console.WriteLine(str + " 0");
+            Console.ReadKey();
         }
-
-        static void Main(string[] args)
-        {
-            nataliaTest();
-        }
-
-
-
-
     }
 }
