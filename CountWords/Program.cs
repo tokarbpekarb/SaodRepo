@@ -26,15 +26,24 @@ namespace CountWords
 
             //реализация через SortedList (двоичный поиск) задание 8
             Console.WriteLine("Реализация через SortedList");
-            SortedList<string, int> list = new SortedList<string, int>();
-            foreach(var word in words)
+            times.Clear();
+            for(int i=0; i<5; i++)
             {
-                if (list.ContainsKey(word))
-                    list[word]++;
-                else
-                    list.Add(word, 1);
+                SortedList<string, int> list = new SortedList<string, int>();
+                watch = new System.Diagnostics.Stopwatch();
+                watch.Start();
+                foreach(var word in words)
+                {
+                    if (list.ContainsKey(word))
+                        list[word]++;
+                    else
+                        list.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
             }
-            Console.WriteLine("Уникальных: " + list.Count);
+            
+            //Console.WriteLine("Уникальных: " + list.Count);
 
             //реализация через AVL дерево (задание 9)
             Console.WriteLine("Реализация через AVL дерево");
