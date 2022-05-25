@@ -8,7 +8,7 @@ namespace CountWords
 {
     class MedianaClass
     {
-        public Tuple<double, double, double> calc_mean_median_stddev(List<long> times)
+        public static Tuple<double, double, double> calc_mean_median_stddev(List<long> times)
         {
             double mean = 0, median = 0, stddev = 0;
 

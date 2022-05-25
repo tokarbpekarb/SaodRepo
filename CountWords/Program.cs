@@ -19,7 +19,7 @@ namespace CountWords
             // Уникальных: 525090
             // the 564373
 
-            System.Diagnostics.Stopwatch watch;
+            System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
             List<long> times = new List<long>();
 
             long elapsedMs;
@@ -29,9 +29,9 @@ namespace CountWords
             times.Clear();
             for(int i=0; i<5; i++)
             {
-                SortedList<string, int> list = new SortedList<string, int>();
-                watch = new System.Diagnostics.Stopwatch();
+                watch.Reset();
                 watch.Start();
+                SortedList<string, int> list = new SortedList<string, int>();
                 foreach(var word in words)
                 {
                     if (list.ContainsKey(word))
@@ -42,20 +42,29 @@ namespace CountWords
                 watch.Stop();
                 times.Add(watch.ElapsedMilliseconds);
             }
-            
+            Console.WriteLine(MedianaClass.calc_mean_median_stddev(times));
             //Console.WriteLine("Уникальных: " + list.Count);
 
             //реализация через AVL дерево (задание 9)
             Console.WriteLine("Реализация через AVL дерево");
-            WordsCountAVL tree = new WordsCountAVL();
-            foreach (var word in words)
+            times.Clear();
+            for(int i=0; i<5; i++)
             {
-                if (tree.ContainsKey(word))
-                    ++tree[word];
-                else
-                    tree.Add(word, 1);
+                watch.Reset();
+                watch.Start();
+                WordsCountAVL tree = new WordsCountAVL();
+                foreach (var word in words)
+                {
+                    if (tree.ContainsKey(word))
+                        ++tree[word];
+                    else
+                        tree.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
             }
-            Console.WriteLine("УникальныхЖ " + tree.Count);
+            Console.WriteLine(MedianaClass.calc_mean_median_stddev(times));
+            //Console.WriteLine("УникальныхЖ " + tree.Count);
 
 
             //var dict = new SortedDictionary<string, int>();
