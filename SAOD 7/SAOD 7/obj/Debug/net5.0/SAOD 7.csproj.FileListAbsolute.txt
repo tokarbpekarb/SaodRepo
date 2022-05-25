@@ -1,0 +1,16 @@
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\SAOD 7.exe
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\SAOD 7.deps.json
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\SAOD 7.runtimeconfig.json
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\SAOD 7.runtimeconfig.dev.json
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\SAOD 7.dll
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\ref\SAOD 7.dll
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\bin\Debug\net5.0\SAOD 7.pdb
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.csproj.AssemblyReference.cache
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.GeneratedMSBuildEditorConfig.editorconfig
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.AssemblyInfoInputs.cache
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.AssemblyInfo.cs
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.csproj.CoreCompileInputs.cache
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.dll
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\ref\SAOD 7.dll
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.pdb
+A:\2 КУРС\САОД\SAOD 7\SAOD 7\obj\Debug\net5.0\SAOD 7.genruntimeconfig.cache
