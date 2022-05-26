@@ -1,0 +1,16 @@
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\SAOD Count Words.exe
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\SAOD Count Words.deps.json
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\SAOD Count Words.runtimeconfig.json
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\SAOD Count Words.runtimeconfig.dev.json
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\SAOD Count Words.dll
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\ref\SAOD Count Words.dll
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\bin\Debug\net5.0\SAOD Count Words.pdb
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.csproj.AssemblyReference.cache
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.GeneratedMSBuildEditorConfig.editorconfig
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.AssemblyInfoInputs.cache
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.AssemblyInfo.cs
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.csproj.CoreCompileInputs.cache
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.dll
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\ref\SAOD Count Words.dll
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.pdb
+A:\2 КУРС\САОД\SAOD Count Words\SAOD Count Words\obj\Debug\net5.0\SAOD Count Words.genruntimeconfig.cache
