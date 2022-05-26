@@ -42,7 +42,7 @@ namespace CountWords
                 watch.Stop();
                 times.Add(watch.ElapsedMilliseconds);
             }
-            Console.WriteLine(MedianaClass.calc_mean_median_stddev(times));
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
             //Console.WriteLine("Уникальных: " + list.Count);
 
             //реализация через AVL дерево (задание 9)
@@ -63,7 +63,7 @@ namespace CountWords
                 watch.Stop();
                 times.Add(watch.ElapsedMilliseconds);
             }
-            Console.WriteLine(MedianaClass.calc_mean_median_stddev(times));
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
             //Console.WriteLine("УникальныхЖ " + tree.Count);
 
 
