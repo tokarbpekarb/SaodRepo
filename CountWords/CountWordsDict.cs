@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace CountWords
 {
-    public class Dict<TKey, TValue>
+    class CountWordsDict : ICountWords
     {
         private struct Entry
         {
             // Lower 31 bits of hash code, -1 if unused
             public int hashCode;
             public int next;        // Index of next entry, -1 if last
-            public TKey key;           // Key of entry
-            public TValue value;         // Value of entry
+            public string key;           // Key of entry
+            public int value;         // Value of entry
         }
 
         private int[] buckets;
         private Entry[] entries;
-        private IEqualityComparer<TKey> comparer;
+        //private IEqualityComparer<TKey> comparer;
         private int count;
         private int freeList;
         private int freeCount;
 
-        public Dict(int capacity)
+        public int Count { get => count; }
+        public CountWordsDict(int capacity)
         {
-            comparer = EqualityComparer<TKey>.Default;
+            //comparer = EqualityComparer<TKey>.Default;
 
             int size = capacity;
             buckets = new int[size];
@@ -62,15 +63,17 @@ namespace CountWords
             buckets = newBuckets;
             entries = newEntries;
         }
-        public void Add(TKey key, TValue value)
+
+        public void Add(string key, int value)
         {
-            int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
+            int hashCode = key.GetHashCode() & 0x7FFFFFFF;
+            //int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
             int targetBucket = hashCode % buckets.Length;
             for (int i = buckets[targetBucket]; i >= 0;
             i = entries[i].next)
             {
                 if (entries[i].hashCode == hashCode &&
-                comparer.Equals(entries[i].key, key))
+                string.Equals(entries[i].key, key))
                 {
 
                     entries[i].value = value;
@@ -103,39 +106,39 @@ namespace CountWords
             buckets[targetBucket] = index;
         }
 
-        public int FindEntry(TKey key)
+        public int FindEntry(string key)
         {
-
             if (buckets != null)
             {
-                int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
+                int hashCode = key.GetHashCode() & 0x7FFFFFFF;
+                //int hashCode = comparer.GetHashCode(key) & 0x7FFFFFFF;
                 for (int i =
                 buckets[hashCode % buckets.Length];
                 i >= 0; i = entries[i].next)
                 {
                     if (entries[i].hashCode == hashCode
-                    && comparer.Equals(entries[i].key, key))
+                    && string.Equals(entries[i].key, key))
                         return i;
                 }
             }
             return -1;
         }
 
-        public bool ContainsKey(TKey key)
+        public bool ContainsKey(string key)
         {
             return FindEntry(key) >= 0;
         }
 
-        public void Print()
+        public int this [string key]
         {
-            Console.WriteLine("Index\tBuckets\t\tEntries\n");
-            for (int i = 0; i < buckets.Length; i++)
+            get
             {
-                Console.Write(i + "\t\t" + buckets[i] + "\t\tKey: "
-                + entries[i].key + ", Hash: " + entries[i].hashCode + " ");
-                Console.WriteLine(entries[i].next);
+                return entries[FindEntry(key)].value;
+            }
+            set
+            {
+                entries[FindEntry(key)].value = value;
             }
         }
-
     }
 }

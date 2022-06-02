@@ -27,12 +27,12 @@ namespace CountWords
             //реализация через SortedList (двоичный поиск) задание 8
             Console.WriteLine("Реализация через SortedList");
             times.Clear();
-            for(int i=0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 watch.Reset();
                 watch.Start();
                 SortedList<string, int> list = new SortedList<string, int>();
-                foreach(var word in words)
+                foreach (var word in words)
                 {
                     if (list.ContainsKey(word))
                         list[word]++;
@@ -48,7 +48,7 @@ namespace CountWords
             //реализация через AVL дерево (задание 9)
             Console.WriteLine("Реализация через AVL дерево");
             times.Clear();
-            for(int i=0; i<5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 watch.Reset();
                 watch.Start();
@@ -66,6 +66,25 @@ namespace CountWords
             Console.WriteLine(BoxPlot.MakeCalculations(times));
             //Console.WriteLine("УникальныхЖ " + tree.Count);
 
+            //реализация через хэш таблицу (задание 11)
+            Console.WriteLine("Реализация через Хэш-таблицу");
+            times.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                watch.Reset();
+                watch.Start();
+                var dict = new CountWordsDict(10000);
+                foreach (var word in words)
+                {
+                    if (dict.ContainsKey(word)) // log(n)
+                        ++dict[word];      // log(n)
+                    else
+                        dict.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
+            }
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
 
             //var dict = new SortedDictionary<string, int>();
             //var dict = new Dictionary<string, int>();
