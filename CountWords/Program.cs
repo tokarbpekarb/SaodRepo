@@ -18,83 +18,103 @@ namespace CountWords
             // Уникальных: 525090
             // the 564373
 
-            //префиксное дерево(неправильно считает)
-            var tree = new PrefixTree();
-            foreach (var word in words)
+            ////префиксное дерево(неправильно считает)
+            //var tree = new PrefixTree();
+            //foreach (var word in words)
+            //{
+            //    if (tree.ContainsKey(word)) // log(n)
+            //        ++tree[word];      // log(n)
+            //    else
+            //        tree.Add(word, 1);
+            //}
+            //Console.WriteLine("Уникальных: " + tree.Count);
+
+            System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
+            List<long> times = new List<long>();
+
+            long elapsedMs;
+
+            //реализация через SortedList (двоичный поиск) задание 8
+            Console.WriteLine("Реализация через SortedList");
+            times.Clear();
+            for (int i = 0; i < 5; i++)
             {
-                if (tree.ContainsKey(word)) // log(n)
-                    ++tree[word];      // log(n)
-                else
-                    tree.Add(word, 1);
+                watch.Reset();
+                watch.Start();
+                SortedList<string, int> list = new SortedList<string, int>();
+                foreach (var word in words)
+                {
+                    if (list.ContainsKey(word))
+                        list[word]++;
+                    else
+                        list.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
             }
-            Console.WriteLine("Уникальных: " + tree.Count);
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
+            //Console.WriteLine("Уникальных: " + list.Count);
 
-            //System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
-            //List<long> times = new List<long>();
+            //реализация через AVL дерево (задание 9)
+            Console.WriteLine("Реализация через AVL дерево");
+            times.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                watch.Reset();
+                watch.Start();
+                WordsCountAVL tree = new WordsCountAVL();
+                foreach (var word in words)
+                {
+                    if (tree.ContainsKey(word))
+                        ++tree[word];
+                    else
+                        tree.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
+            }
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
+            //Console.WriteLine("УникальныхЖ " + tree.Count);
 
-            //long elapsedMs;
+            //реализация через префиксное дерево (задание 10)
+            Console.WriteLine("Реализация через префиксное дерево");
+            times.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                watch.Reset();
+                watch.Start();
+                PrefixTree prefix = new PrefixTree();
+                foreach (var word in words)
+                {
+                    if (prefix.ContainsKey(word))
+                        ++prefix[word];
+                    else
+                        prefix.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
+            }
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
 
-            ////реализация через SortedList (двоичный поиск) задание 8
-            //Console.WriteLine("Реализация через SortedList");
-            //times.Clear();
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    watch.Reset();
-            //    watch.Start();
-            //    SortedList<string, int> list = new SortedList<string, int>();
-            //    foreach (var word in words)
-            //    {
-            //        if (list.ContainsKey(word))
-            //            list[word]++;
-            //        else
-            //            list.Add(word, 1);
-            //    }
-            //    watch.Stop();
-            //    times.Add(watch.ElapsedMilliseconds);
-            //}
-            //Console.WriteLine(BoxPlot.MakeCalculations(times));
-            ////Console.WriteLine("Уникальных: " + list.Count);
-
-            ////реализация через AVL дерево (задание 9)
-            //Console.WriteLine("Реализация через AVL дерево");
-            //times.Clear();
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    watch.Reset();
-            //    watch.Start();
-            //    WordsCountAVL tree = new WordsCountAVL();
-            //    foreach (var word in words)
-            //    {
-            //        if (tree.ContainsKey(word))
-            //            ++tree[word];
-            //        else
-            //            tree.Add(word, 1);
-            //    }
-            //    watch.Stop();
-            //    times.Add(watch.ElapsedMilliseconds);
-            //}
-            //Console.WriteLine(BoxPlot.MakeCalculations(times));
-            ////Console.WriteLine("УникальныхЖ " + tree.Count);
-
-            ////реализация через хэш таблицу (задание 11)
-            //Console.WriteLine("Реализация через Хэш-таблицу");
-            //times.Clear();
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    watch.Reset();
-            //    watch.Start();
-            //    var dict = new CountWordsDict(10000);
-            //    foreach (var word in words)
-            //    {
-            //        if (dict.ContainsKey(word)) // log(n)
-            //            ++dict[word];      // log(n)
-            //        else
-            //            dict.Add(word, 1);
-            //    }
-            //    watch.Stop();
-            //    times.Add(watch.ElapsedMilliseconds);
-            //}
-            //Console.WriteLine(BoxPlot.MakeCalculations(times));
+            //реализация через хэш таблицу (задание 11)
+            Console.WriteLine("Реализация через Хэш-таблицу");
+            times.Clear();
+            for (int i = 0; i < 5; i++)
+            {
+                watch.Reset();
+                watch.Start();
+                var dict = new CountWordsDict(10000);
+                foreach (var word in words)
+                {
+                    if (dict.ContainsKey(word)) // log(n)
+                        ++dict[word];      // log(n)
+                    else
+                        dict.Add(word, 1);
+                }
+                watch.Stop();
+                times.Add(watch.ElapsedMilliseconds);
+            }
+            Console.WriteLine(BoxPlot.MakeCalculations(times));
 
             ///////////////////////////////////////////////////////////////////////////////////////////////
 
