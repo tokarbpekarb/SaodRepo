@@ -42,5 +42,17 @@ namespace CountWords
             int c = Convert.ToInt32(index);
             return index % 1.0 == 0 ? Convert.ToDouble(times[c]) : Convert.ToDouble((times[c] + times[c + 1]) / 2);
         }
+        int Min = int.MaxValue;
+        public int MinValue()
+        {
+            foreach (var item in collection)
+            {
+                if (item <Min)
+                {
+                    Min = item;
+                }
+            }
+            return Min;
+        }
     }
 }
