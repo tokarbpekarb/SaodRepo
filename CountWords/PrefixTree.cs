@@ -42,7 +42,7 @@ namespace CountWords
                     current = current.childs.Last();
                 }
             }
-            if(!found)
+            if(!current.isWord)
             {
                 current.isWord = true;
                 count++;
